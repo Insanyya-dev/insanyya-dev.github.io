@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>insanyya Apps</title>
+<meta name="description" content="Food scanner apps that show their sources: additives, halal, vegan, vegetarian, allergies, insects.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f7dcc4; --page: #fbf1e8; --card: #ffffff; --ink: #231f1c; --muted: #6f625a;
+    --accent: #e8743b; --accent-ink: #ffffff; --chip: #f1e1d2; --stamp: rgba(35, 31, 28, .08);
+    --shadow: 0 1px 2px rgba(60, 35, 20, .06), 0 6px 18px rgba(60, 35, 20, .06);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #2a211b; --page: #1d1714; --card: #2c241f; --ink: #f6ece4; --muted: #c2b2a6;
+      --accent: #f08a52; --accent-ink: #1d1714; --chip: #3a2f28; --stamp: rgba(255, 255, 255, .06);
+      --shadow: none;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #2a211b; --page: #1d1714; --card: #2c241f; --ink: #f6ece4; --muted: #c2b2a6;
+    --accent: #f08a52; --accent-ink: #1d1714; --chip: #3a2f28; --stamp: rgba(255, 255, 255, .06);
+    --shadow: none;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--page); color: var(--ink); font: 400 16px/1.5 Outfit, system-ui, sans-serif; }
+  header { position: relative; overflow: hidden; background: var(--bg); padding: 56px 16px 72px; border-radius: 0 0 32px 32px; }
+  .stamps span { position: absolute; border: 2px solid var(--stamp); color: var(--stamp); border-radius: 8px;
+    padding: 2px 8px; font-weight: 800; font-size: 14px; transform: rotate(var(--r)); user-select: none; }
+  .wrap { max-width: 880px; margin: 0 auto; position: relative; }
+  .hello { color: var(--muted); font-weight: 600; margin: 0 0 4px; }
+  h1 { margin: 0; font-size: clamp(34px, 7vw, 52px); font-weight: 800; letter-spacing: -.02em; line-height: 1.05; }
+  .lead { max-width: 560px; margin: 14px 0 0; font-size: 18px; color: var(--muted); }
+  main { padding: 0 16px 48px; margin-top: -36px; }
+  .section-title { display: flex; align-items: baseline; gap: 10px; margin: 36px 0 12px; }
+  .section-title h2 { margin: 0; font-size: 22px; font-weight: 800; }
+  .section-title small { color: var(--muted); }
+  .apps { display: grid; gap: 12px; grid-template-columns: 1fr; }
+  @media (min-width: 720px) { .apps { grid-template-columns: 1fr 1fr; } }
+  .app { display: flex; gap: 14px; align-items: flex-start; background: var(--card); border-radius: 18px; padding: 14px; box-shadow: var(--shadow); }
+  .app img { width: 64px; height: 64px; border-radius: 16px; flex: none; }
+  .app h3 { margin: 0; font-size: 18px; font-weight: 800; }
+  .app p { margin: 2px 0 10px; color: var(--muted); font-size: 15px; }
+  .links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .btn { display: inline-block; text-decoration: none; font-weight: 600; font-size: 14px; border-radius: 999px; padding: 6px 14px; }
+  .btn.play { background: var(--accent); color: var(--accent-ink); }
+  .btn.soft { background: var(--chip); color: var(--ink); }
+  .first { margin-top: 0; }
+  footer { max-width: 880px; margin: 0 auto; padding: 24px 16px 48px; color: var(--muted); font-size: 15px; }
+  footer a { color: var(--ink); }
+  .card { background: var(--card); border-radius: 18px; padding: 16px; box-shadow: var(--shadow); }
+</style>
+</head>
+<body>
+<header>
+  <div class="stamps" aria-hidden="true">
+    <span style="top:18px;left:6%;--r:-8deg">E120</span>
+    <span style="top:30px;right:8%;--r:6deg">E330</span>
+    <span style="bottom:30px;left:38%;--r:-4deg">E471</span>
+    <span style="bottom:46px;right:22%;--r:10deg">E621</span>
+  </div>
+  <div class="wrap">
+    <p class="hello">insanyya Apps</p>
+    <h1>Know what's in<br>your food</h1>
+    <p class="lead">Scanner apps for additives, halal, vegan, vegetarian, allergies and insects. Every answer shows where it comes from.</p>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="section-title first"><h2>Our apps</h2><small>on Google Play</small></div>
+  <div class="apps">
+    <article class="app">
+      <img src="icons/com.app.mrschak.tab.png" alt="">
+      <div><h3>Food Additives</h3>
+        <p>Look up any E-number: what it is, what official bodies say and what studies found.</p>
+        <div class="links"><a class="btn play" href="https://play.google.com/store/apps/details?id=com.app.mrschak.tab">Google Play</a></div></div>
+    </article>
+    <article class="app">
+      <img src="icons/deen.app.mrschak.myhalalscanner.png" alt="">
+      <div><h3>My Halal Scanner</h3>
+        <p>Scan a barcode or a label and see the ingredients that matter for a halal diet, with their sources.</p>
+        <div class="links"><a class="btn play" href="https://play.google.com/store/apps/details?id=deen.app.mrschak.myhalalscanner">Free</a>
+          <a class="btn soft" href="https://play.google.com/store/apps/details?id=deen.app.mrschak.myhalalscanner.pro">Premium</a>
+          <a class="btn soft" href="Privacy/halal-scanner">Privacy</a></div></div>
+    </article>
+    <article class="app">
+      <img src="icons/health.app.mrschak.myallergiesscanner.free.png" alt="">
+      <div><h3>My Food Allergies Scanner</h3>
+        <p>Scan products and check them against the allergies of everyone in your family.</p>
+        <div class="links"><a class="btn play" href="https://play.google.com/store/apps/details?id=health.app.mrschak.myallergiesscanner.free">Free</a>
+          <a class="btn soft" href="https://play.google.com/store/apps/details?id=health.app.mrschak.myallergiesscanner">Premium</a>
+          <a class="btn soft" href="Privacy/allergies-scanner">Privacy</a></div></div>
+    </article>
+    <article class="app">
+      <img src="icons/health.app.mrschak.veganscanner.free.png" alt="">
+      <div><h3>My Vegan Scanner</h3>
+        <p>Scan a product to see whether its ingredients fit a vegan diet.</p>
+        <div class="links"><a class="btn play" href="https://play.google.com/store/apps/details?id=health.app.mrschak.veganscanner.free">Free</a>
+          <a class="btn soft" href="https://play.google.com/store/apps/details?id=health.app.mrschak.veganscanner">Premium</a></div></div>
+    </article>
+    <article class="app">
+      <img src="icons/health.app.mrschak.vegetarianscanner.free.png" alt="">
+      <div><h3>My Vegetarian Scanner</h3>
+        <p>Scan a product to see whether its ingredients fit a vegetarian diet.</p>
+        <div class="links"><a class="btn play" href="https://play.google.com/store/apps/details?id=health.app.mrschak.vegetarianscanner.free">Free</a>
+          <a class="btn soft" href="https://play.google.com/store/apps/details?id=health.app.mrschak.vegetarianscanner">Premium</a>
+          <a class="btn soft" href="Privacy/vegetarian-scanner">Privacy</a></div></div>
+    </article>
+    <article class="app">
+      <img src="icons/com.app.mrschak.foodInsectTracker.free.png" alt="">
+      <div><h3>Food Insects Tracker</h3>
+        <p>Spot ingredients made from insects, such as carmine and shellac.</p>
+        <div class="links"><a class="btn play" href="https://play.google.com/store/apps/details?id=com.app.mrschak.foodInsectTracker.free">Free</a>
+          <a class="btn soft" href="https://play.google.com/store/apps/details?id=com.app.mrschak.foodInsectTracker.pro">Premium</a></div></div>
+    </article>
+    <article class="app">
+      <img src="icons/insanyya.apps.deen.thenamesofallah.free.png" alt="">
+      <div><h3>99 Names of Allah + Widget</h3>
+        <p>The 99 names of Allah, with a home-screen widget.</p>
+        <div class="links"><a class="btn play" href="https://play.google.com/store/apps/details?id=insanyya.apps.deen.thenamesofallah.free">Google Play</a></div></div>
+    </article>
+  </div>
+
+  <div class="section-title"><h2>Contact</h2></div>
+  <div class="card">Questions, a wrong result, an idea? Write to
+    <a href="mailto:insanyya.support@gmail.com">insanyya.support@gmail.com</a>.</div>
+</main>
+
+<footer>
+  © insanyya Apps · <a href="Privacy/">Privacy policies</a> · <a href="https://play.google.com/store/apps/developer?id=insanyya+Apps">All apps on Google Play</a>
+</footer>
+</body>
+</html>
